@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'quiz/css/style.css' %}">
+        <title>アカウント作成</title>
+    </head>
+    <body>
+        <h1>ログイン</h1>
+        <form method="post" class="p-4 m-4 bg-light border border-success rounded form-group">
+            {% csrf_token %}
+            {% for error in form.errors.values%}
+                {{ error }}
+            {% endfor %}
+            <label>ユーザーID</label>
+            <input class="form-control" name="username">
+            <label>パスワード</label>
+            <input type="password" class="form-control" name="password">
+            <button type="submit" class="btn btn-success mt-4">ログインする</button>
+        </form>
+    </body>
+</html>

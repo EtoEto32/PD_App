@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="{% static 'quiz/css/quiz.css' %}">
+        <title>3拓クイズ</title>
+    </head>
+    <body style="height: 100%;">
+        <form method="post" action="{% url 'quiz:quiz' %}">
+            {% csrf_token %}
+            {% for question in questions %}
+                <p>{{ question.question_text }}</p>
+                <br>
+                <br>
+                <input type="radio" name="question{{ question.id }}" value="1" class="choice" style="transform:scale(2.0);"> {{ question.option1 }}
+                <input type="radio" name="question{{ question.id }}" value="2" class="choice" style="transform:scale(2.0);"> {{ question.option2 }}
+                <input type="radio" name="question{{ question.id }}" value="3" class="choice" style="transform:scale(2.0);"> {{ question.option3 }}
+                
+                
+            {% endfor %}
+           
+            <br>
+            <br>
+            <br>
+            <input type="submit" value="Submit" name="submit">
+            <a href="{% url 'quiz:result' %}">結果へ</a>
+        </form>
+        <a href="https://www.keishicho.metro.tokyo.lg.jp/kotsu/jikoboshi/bicycle/menu/rule.html" class="styled red-button">詳しい自転車マナーはこちら</a>
+    </body>
+</html>
+
+

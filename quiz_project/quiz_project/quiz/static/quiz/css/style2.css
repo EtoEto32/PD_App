@@ -1,0 +1,108 @@
+h1 {
+    padding: 1rem 2rem;
+    color: #fff;
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#00f8ec), to(#23f980));
+    background-image: -webkit-linear-gradient(left, #00dff8 0%, #23f959 100%);
+    background-image: linear-gradient(to right, #00e3f8 0%, #23f9a3 100%);
+    font-weight: normal;
+    font-size: 50px; 
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-bottom: 10px;
+    text-align: center;
+    position: relative;
+    margin: 0 0 30px 0;
+    letter-spacing: 5px;
+}
+
+p {
+    width: 80%;
+    line-height: 2;
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+    left: 100px;
+    z-index: 999;
+    margin: 50px 0 0;
+    color: #fff;
+    letter-spacing: 2px;
+    background-color: rgba(255,255,255,0.4);
+    font-size: 35px;
+}
+
+
+html {
+    background-color:rgb(250, 252, 252)
+}
+
+
+body {
+    font-family: "fantasy";
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: 
+        linear-gradient(140deg, 
+        #00f3ffA0, 
+        #0028b960 40%, 
+        #00f3ff60 60%, 
+        #00f3ffA0), 
+        url("quiz/static/quiz/images/run4.jpg");
+        background-repeat: no-repeat;
+        background-position: 30%;
+        animation: move 20s infinite both;
+}
+
+@keyframes move{
+0% {
+background-size:100% auto;
+}
+50% {
+background-size:140% auto;
+}
+100% {
+background-size:100% auto;
+}
+}
+
+img {
+    height: 250px;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    right: 20px;
+    opacity:1;
+}
+
+
+a.red-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0000; /* 赤い色 */
+    color: #fff; /* テキストの色 */
+    text-decoration: none; /* 下線を削除 */
+    border-radius: 5px; /* 適切な値に調整 */
+}
+
+form {
+    font-size: 28px;
+    left: 400px;
+    vertical-align:middle;
+    
+}
+
+.choice {
+    margin-left: 110px; /* 適切な余白を設定してください */
+    position: relative;
+    top: -4px;
+    vertical-align:middle;
+    
+}
+
+.input {
+    margin-right: 5px;
+}
+
+
+
+

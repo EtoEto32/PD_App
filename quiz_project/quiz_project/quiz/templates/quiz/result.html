@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="{% static 'quiz/css/result.css' %}">
+        <title>結果画面</title>
+    </head>
+    <body style="height: 100%;">
+        <h1 class="result">クイズの結果</h1>
+        <p>あなたの結果: あなたのスコアは{{ score.score }}/{{ question_length }}です</p>
+        <ul>
+            {% for answer in user_answers %}
+                <li>
+                    <h4>{{ answer.question.question_text }} </h4>
+                    <h4>あなたの選択肢は {{ answer.selected_option }}
+                    {% if answer.is_correct %}(正解){% else %}(不正解){% endif %}</h4>
+                </li>
+            {% endfor %}
+        </ul>
+        <br>
+        <br>
+        <br>
+        <a href="{% url 'quiz:home' %}" class="home-button">ホーム画面へ</a>
+        <a href="{% url 'quiz:quiz' %}" class="again-button">もう一度クイズをする</a>
+        
+    </body>
+</html>
+
+
+
+

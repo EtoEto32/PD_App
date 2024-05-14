@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="{% static 'quiz/css/home.css' %}">
+        <img src="{% static "a.jpeg"%}" >
+        <title>自転車マナークイズ！</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-success sticky-top">
+            <div class="navbar-nav d-flex flex-row">
+              {% if request.user.is_authenticated %}
+                <!--<a class="nav-link mx-3" href="{% url 'accounts:logout' %}">ログアウト</a>-->
+              {% else %}
+                <!--<a class="nav-link mx-3" href="{% url 'accounts:login' %}">ログイン</a>-->
+                <a class="nav-link mx-3" href="{% url 'accounts:signup' %}">会員登録</a>
+              {% endif %}
+            </div>
+        </nav>
+		<img src="{% static "a.jpeg"%}" >
+		<h1>自転車ルールクイズ！(quiz)</h1>
+		<p>自転車のマナーをしっかり守り、快適な自転車ライフを送りましょう。</p>
+        <a href="https://www.keishicho.metro.tokyo.lg.jp/kotsu/jikoboshi/bicycle/menu/rule.html" class="styled">詳しい自転車マナーはこちら</a>
+        <a href="{% url 'accounts:login' %}" class="styled second-button">クイズ</a>
+    </body>
+</html>

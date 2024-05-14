@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="{% static 'quiz/css/style.css' %}">
+        <img src="{% static "static/a.jpeg"%}" >
+        <title>{% block title %}{% endblock title %}</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-success sticky-top">
+            <div class="navbar-nav d-flex flex-row">
+              {% if request.user.is_authenticated %}
+                <!--<a class="nav-link mx-3" href="{% url 'accounts:logout' %}">ログアウト</a>-->
+              {% else %}
+                <!--<a class="nav-link mx-3" href="{% url 'accounts:login' %}">ログイン</a>-->
+                <a class="nav-link mx-3" href="{% url 'accounts:signup' %}">会員登録</a>
+              {% endif %}
+            </div>
+          </nav>
+        {% block content %} {% endblock content %}
+        <a href="https://www.keishicho.metro.tokyo.lg.jp/kotsu/jikoboshi/bicycle/menu/rule.html" class="styled">詳しい自転車マナーはこちら</a>
+        <a href="{% url 'accounts:login' %}" class="styled second-button">クイズ</a>
+    </body>
+</html>

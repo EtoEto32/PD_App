@@ -1,0 +1,140 @@
+h1 {
+    padding: 1rem 2rem;
+    border: 3px solid #000;
+    color: #1f1d1d;
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(#00dff8);
+    font-weight: normal;
+    font-size: 55px; 
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-bottom: 10px;
+    text-align: center;
+    position: relative;
+    margin: 0px 0px 30px;
+    letter-spacing: 5px;
+    
+}
+
+p {
+    padding: 1rem 2rem;
+    border: 3px solid #000;
+    width: 80%;
+    line-height: 2;
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+    left: 100px;
+    z-index: 999;
+    margin: 50px 0 0;
+    color: #070000ee;
+    letter-spacing: 2px;
+    background-color: rgb(255, 255, 255);
+    font-size: 35px;
+}
+
+
+html {
+    background-color:rgb(250, 252, 252)
+}
+
+
+body {
+    font-family: "fantasy";
+    margin: 0;
+    width: 100vw;
+    height: 200vh;
+    background: linear-gradient(to bottom, rgba(247, 208, 241, 0.944) 0%, rgb(154, 206, 245) 100%);/*正規の指定*/
+        
+}
+
+@keyframes move{
+0% {
+background-size:100% auto;
+}
+50% {
+background-size:140% auto;
+}
+100% {
+background-size:100% auto;
+}
+
+}
+a.red-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0000; /* 赤い色 */
+    color: #fff; /* テキストの色 */
+    text-decoration: none; /* 下線を削除 */
+    border-radius: 5px; /* 適切な値に調整 */
+}
+
+img {
+    height: 250px;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    right: 20px;
+    opacity:1;
+}
+
+
+
+form {
+    font-size: 28px;
+    left: 400px;
+    vertical-align:middle;
+    
+}
+
+.choice {
+    margin-left: 110px; /* 適切な余白を設定してください */
+    position: relative;
+    top: -4px;
+    vertical-align:middle;
+    
+}
+
+input {
+    margin-right: 5px;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0000; /* 赤い色 */
+    color: #fff; /* テキストの色 */
+    text-decoration: none; /* 下線を削除 */
+    border-radius: 5px; /* 適切な値に調整 */
+    bottom: 50px;
+    right: 200px;
+    bottom: 200px;
+}
+
+/* 画面を固定する */
+.wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+.wrapper:before {
+    content: "";
+    display: block;
+    padding-top: 50%;
+}
+  
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+}
+
+a {
+    left: 100px;
+    bottom: 100px;
+}
+
+
+
+
